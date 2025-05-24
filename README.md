@@ -72,7 +72,7 @@ Our method demonstrates:
 
 > QPU Circuit Packing: A Fidelity-Aware Multi-Copy Execution Strategy.  
 > 🏆 Winner – Q-SITE Hackathon 2024  
-> Authors: [Your Name(s)]
+> Authors: Hemish Ahuja, Mukul, Maral, Negar
 
 ---
 
