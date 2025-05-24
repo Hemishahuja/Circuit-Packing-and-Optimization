@@ -89,5 +89,5 @@ Huge thanks to **Haiqu**, **IBM Quantum**, and the **Q-SITE Hackathon organizers
 
 ## 📬 Contact
 
-Feel free to reach out via [GitHub Issues](https://github.com/your-repo/issues) or connect on [LinkedIn](https://www.linkedin.com/in/yourname/) if you want to collaborate or learn more!
+Feel free to reach out or connect on [LinkedIn](https://www.linkedin.com/in/hemishahuja/) if you want to collaborate or learn more!
 
