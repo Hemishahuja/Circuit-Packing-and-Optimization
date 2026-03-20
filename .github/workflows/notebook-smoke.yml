@@ -1,0 +1,21 @@
+name: Notebook Smoke
+
+on:
+  workflow_dispatch:
+  pull_request:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install package
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+      - name: Simulator smoke run
+        run: |
+          python -m circuit_packing run --copies 2 --shots 128 --output-dir outputs

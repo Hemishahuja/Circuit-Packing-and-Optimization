@@ -1,0 +1,55 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "circuit-packing"
+version = "0.1.0"
+description = "Simulator-first QPU circuit packing with hardware-aware spatial multiplexing."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Circuit Packing Team" }]
+dependencies = [
+  "networkx",
+  "qiskit>=1,<2",
+  "qiskit-aer>=0.13,<0.14",
+  "qiskit-ibm-runtime",
+]
+
+[project.optional-dependencies]
+dev = [
+  "mypy",
+  "pre-commit",
+  "pytest",
+  "pytest-cov",
+  "ruff",
+]
+
+[project.scripts]
+circuit-packing = "circuit_packing.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/circuit_packing"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+extend-exclude = ["*.ipynb"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+python_version = "3.10"
+pretty = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_return_any = true
+check_untyped_defs = true
+disable_error_code = ["import-untyped"]
